@@ -1,0 +1,37 @@
+.numtext {
+  display: inline-flex;
+  gap: 10px;
+  font-family: monospace;
+  background: #282a3a;
+  border-radius: 2px;
+  padding: 20px 10px;
+}
+
+.codearea {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 0;
+  border: 0;
+  background: #282a3a;
+  color: #FFF;
+  min-width: 0px;
+  width: 1000px;
+  outline: none;
+  resize: horizontal;
+}
+
+.line-numbers {
+  counter-reset: linenumber -1;
+  width: 20px;
+  text-align: right;
+}
+
+.line-numbers span {
+  counter-increment: linenumber;
+}
+
+.line-numbers span::before {
+  content: counter(linenumber);
+  display: block;
+  color: #506882;
+}
